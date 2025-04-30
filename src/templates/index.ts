@@ -1,0 +1,1 @@
+export { listTemplates, addTemplate, removeTemplate } from './manager';

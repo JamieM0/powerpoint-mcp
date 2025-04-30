@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    # Mount the .env file if it exists in the project root
+    # The file needs to be created manually if needed
+    volumes:
+      - type: bind
+        source: ./.env
+        target: /app/.env
+        read_only: true
